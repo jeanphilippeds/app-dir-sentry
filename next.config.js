@@ -8,18 +8,13 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  async rewrites() {
-    return {
-      fallback: [
-        {
-          source: '/:path*',
-          destination: `https://${process.env.LEGACY_SHOPIFY_DOMAIN}/:path*`,
-        },
-      ],
-    };
-  },
 };
 
 module.exports = bundleAnalyzer(nextConfig);
 
+module.exports = withSentryConfig(
+  module.exports,
+  { silent: true },
+  { hideSourcemaps: true },
+);
 
