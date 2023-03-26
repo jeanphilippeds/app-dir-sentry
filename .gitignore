@@ -1,0 +1,20 @@
+# Node
+node_modules
+
+# Yarn
+.yarn
+.pnp.*
+
+# Next
+.next
+
+# Typescript
+tsconfig.tsbuildinfo
+
+# Env
+.env
+# Sentry
+.sentryclirc
+
+# Sentry
+next.config.original.js
